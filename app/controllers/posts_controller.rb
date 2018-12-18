@@ -30,7 +30,7 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.content = params[:content]
     @post.save
-    redirect_to('posts')
+    redirect_to('/posts')
   end
 
   def destroy
