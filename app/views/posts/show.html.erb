@@ -1,0 +1,8 @@
+<div class='posts-show-item'>
+    <%= @post.content %>
+  <div class='post-item'>
+    <%= @post.created_at %>
+  </div>
+</div>
+<%= link_to('edit','/posts/#(@post.id)/edit') %>
+<%= link_to('destroy','/posts/#(@post.id)/destroy',{method:'post'}) %>
