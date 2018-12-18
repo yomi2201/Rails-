@@ -1,5 +1,5 @@
 <h1><%= @title %></h1>
-
+<%= link_to('New post',"/posts/new") %>
 <% @posts.each do |post| %>
     <div class='posts-index-item'>
       <%= link_to(post.content, "/posts/#{post.id}") %>

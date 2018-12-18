@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @title='Add new'
     @post = Post.new
   end
 
