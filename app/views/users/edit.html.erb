@@ -1,0 +1,9 @@
+<%= form_tag("/users/#{@user.id}/update") do %>
+  <p>ユーザー名</p>
+  <input name="name" value="<%= @user.name %>">
+  <p>メールアドレス</p>
+  <input name="email" value="<%= @user.email %>">
+  <input type='submit' value='編集' />
+<% end %>
+
+<%= link_to('ユーザー一覧','/users') %>

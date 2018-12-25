@@ -1,0 +1,10 @@
+<div class='posts-show-item'>
+    <%= @user.name %>
+  <div class='post-item'>
+    <%= @user.email %>
+  </div>
+</div>
+<%= link_to('編集',"/users/#{@user.id}/edit") %>
+<%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %>
+<br>
+<%= link_to('ユーザー一覧','/users') %>

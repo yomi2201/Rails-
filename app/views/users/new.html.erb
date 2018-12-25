@@ -1,0 +1,10 @@
+<h1>新規登録</h1>
+<%= form_tag('/users/create') do %>
+  <p>ユーザー名</p>
+  <input name="name" value="お名前">
+  <p>メールアドレス</p>
+  <input name="email" value="〜＠gmail.com"><br>
+  <input type="submit" value="新規登録">
+<% end %>
+
+<%= link_to('ユーザー一覧','/users') %>

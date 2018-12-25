@@ -11,11 +11,15 @@
 
   <body>
     <header>
-      <%= link_to('About','/about') %>
+      <%= link_to('タイムライン','/posts') %>
+      <%= link_to('新規登録','/signup') %>
+      <%= link_to('ユーザー一覧','/users') %>
+      <%= link_to('このWebページについて','/about') %>
     </header>
     <div class='container'>
     <h1><%= @title %></h1>
       <%= yield %>
     </div>
+    <footer></footer>
   </body>
 </html>

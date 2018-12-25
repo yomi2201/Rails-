@@ -1,0 +1,6 @@
+<h2><%= link_to('新規登録',"/signup") %></h2>
+<% @users.each do |user| %>
+    <div class='posts-index-item'>
+      <%= link_to(user.name, "/users/#{user.id}") %>
+    </div>
+<% end %>
