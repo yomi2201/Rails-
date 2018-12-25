@@ -14,13 +14,13 @@
  *= require_self
  */
 *{
-    width:600px;
+    width:680px;
     margin:0px auto;
 }
  header{
     background-color: #EEE;
     margin:0px auto;
-    width:600px;
+    width:680px;
 }
 
 body{
@@ -31,5 +31,6 @@ body{
     background-color: #EEE;
     color:black;
     margin:0 auto;
-    width:600px;
+    width:80%;
+    width:680px;
 }
