@@ -22,9 +22,9 @@ class UsersController < ApplicationController
     )
     if @user.save
       flash[:notice] = "投稿を作成しました"
-      redirect_to("/users")
+      redirect_to("/users/#{@user.id}")
     else
-      render("users/new")
+      render("/users/new")
     end
   end
 
@@ -35,10 +35,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    @user.name = params[:name]
+    @user.name  = params[:name]
     @user.email = params[:email]
     if @user.save
-      flash[:notice] = "投稿を編集しました"
+      flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")
     else
       render("/users/edit")

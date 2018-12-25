@@ -11,7 +11,6 @@ class PostsController < ApplicationController
   end
 
   def new
-    @title='Add new'
     @post = Post.new
   end
 
@@ -21,12 +20,11 @@ class PostsController < ApplicationController
       flash[:notice] = "投稿を作成しました"
       redirect_to("/posts")
     else
-      render("posts/new")
+      render("/posts/new")
     end
   end
 
   def edit
-    @title='Edit it'
     @post = Post.find_by(id: params[:id])
   end
 

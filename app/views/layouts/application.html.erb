@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cprog8</title>
+    <title>Progate</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,6 +16,11 @@
       <%= link_to('ユーザー一覧','/users') %>
       <%= link_to('このWebページについて','/about') %>
     </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <div class='container'>
     <h1><%= @title %></h1>
       <%= yield %>

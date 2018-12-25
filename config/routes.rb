@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get  "users/:id"=>"users#show"
 
   root 'home#top'
-  get  'top'=>'home#top'
+  get  '/'=>'home#top'
   get  'about'=>'home#about'
 
   get  'posts'=>'posts#index'

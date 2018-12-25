@@ -13,11 +13,18 @@
  *= require_tree .
  *= require_self
  */
-
+*{
+    width:600px;
+    margin:0px auto;
+}
  header{
     background-color: #EEE;
-    margin:50px auto;
+    margin:0px auto;
     width:600px;
+}
+
+body{
+    background-color:#EEE;    
 }
 
 .container{
@@ -25,8 +32,4 @@
     color:black;
     margin:0 auto;
     width:600px;
-}
-
-*{
-    background-color: #EEE;
 }
