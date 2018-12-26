@@ -3,6 +3,7 @@
   <div class='users-item'>
     <%= @user.email %>
   </div>
+  <img src="<%= "/user_images/#{@user.image_name}" %>" >
 </div>
 <%= link_to('編集',"/users/#{@user.id}/edit") %>
 <%= link_to("削除", "/users/#{@user.id}/destroy", {method: "post"}) %>
