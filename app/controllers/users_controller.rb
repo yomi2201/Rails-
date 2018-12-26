@@ -53,10 +53,28 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-    @user = User.find_by(id: params[:id])
-    @post.destroy
-    flash[:notice] = "投稿を削除しました"
-    redirect_to("/users")
+  def login_form
   end
+
+  def login
+    @user = User.find_by(
+      email: params[:email],
+      password: params[:password],
+      )
+    
+    if @user
+      flash[:notice] = "ログインしました"
+      redirect_to("/posts")
+    else
+      @error_message = 'メールアドレスまたはパスワードが間違っています'
+      render("users/login_form")
+    end
+  end
+
+  # def destroy
+  #   @user = User.find_by(id: params[:id])
+  #   @post.destroy
+  #   flash[:notice] = "投稿を削除しました"
+  #   redirect_to("/users")
+  # end
 end
