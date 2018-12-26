@@ -13,21 +13,23 @@
  *= require_tree .
  *= require_self
  */
-*{
-    width:680px;
-    margin:0px auto;
-}
+
  header{
+    font-size:32px;
+    width:680px;
     background-color: #EEE;
     margin:0px auto;
     width:680px;
 }
 
 body{
+    margin:10px auto;
+    width:680px;
     background-color:#EEE;    
 }
 
 .container{
+    font-size:26px;
     background-color: #EEE;
     color:black;
     margin:0 auto;

@@ -1,10 +1,12 @@
-<h1>新規登録</h1>
+<h1>新規ユーザー登録</h1>
 <%= form_tag('/users/create') do %>
   <p>ユーザー名</p>
   <input name="name" value="お名前">
   <p>メールアドレス</p>
-  <input name="email" value="〜＠gmail.com"><br>
+  <input name="email" value="〜＠gmail.com">
+  <p>パスワード</p>
+  <p><input type="password" name="password" value="<%= @user.password %>"></p>
   <input type="submit" value="新規登録">
 <% end %>
 
-<%= link_to('ユーザー一覧','/users') %>
+<%= link_to('ユーザー 一覧','/users') %>

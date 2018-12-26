@@ -16,6 +16,11 @@
       <%= link_to('ログイン','/login') %>
       <%= link_to('ユーザー一覧','/users') %>
       <%= link_to('このWebページについて','/about') %>
+      
+      <% if session[:user_id] %>
+        <%= session[:user_id] %>
+      <% else %>
+      <% end %>
     </header>
     <% if flash[:notice] %>
       <div class="flash">
